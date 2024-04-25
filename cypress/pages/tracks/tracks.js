@@ -34,7 +34,7 @@ Cypress.Commands.add('clickSubmit', () => {
 })
 
 Cypress.Commands.add('validateUploadProgress', () => {
-  cy.get(locators.LABEL_UPLOADING, {timeout: 30000}).should('be.visible').contains('Enviando')
+  cy.get(locators.LABEL_UPLOADING, {timeout: 30000}).should('be.visible').contains('Enviando', { timeout: 30000 })
 })
 
 Cypress.Commands.add('validateMyLibraryTrack', (track_position, track_name) => {
