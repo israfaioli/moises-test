@@ -12,7 +12,7 @@ describe('Songs suite tests', () => {
     cy.clearCookies()
   })
 
-  it('Upload a Song', () => {
+  it.only('Upload a Song', () => {
     const emailAddress = `${faker.internet.userName(50).toLowerCase()}@qatest.com`
     const password = Cypress.env('USER_PASSWORD')
     cy.fillSignupFormAndSubmit(emailAddress, password)
