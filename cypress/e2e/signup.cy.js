@@ -1,9 +1,9 @@
 // cypress/e2e/signup.cy.js
 
-import { faker } from '@faker-js/faker/locale/en'
+import { faker } from '@faker-js/faker'
 
 describe('Sign up', () => {
-  const emailAddress = `${faker.datatype.uuid()}@qatest.com`
+  const emailAddress = `${faker.internet.userName(50).toLowerCase()}@qatest.com`
   const password = Cypress.env('USER_PASSWORD')
 
   afterEach(() => {
