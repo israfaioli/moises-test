@@ -1,9 +1,7 @@
 // cypress/e2e/signup.cy.js
-import { faker } from '@faker-js/faker/locale/en'
+import { faker } from '@faker-js/faker'
 
 describe('Songs suite tests', () => {
-  const emailAddress = `${faker.internet.userName().toLowerCase()}@qatest.com`
-  const password = Cypress.env('USER_PASSWORD')
   const track_file_name = 'TESTE FAQ.mp3'
   const track_name = 'TESTE FAQ'
 
@@ -14,7 +12,9 @@ describe('Songs suite tests', () => {
     cy.clearCookies()
   })
 
-  it.skip('Upload a Song', () => {
+  it('Upload a Song', () => {
+    const emailAddress = `${faker.internet.userName(50).toLowerCase()}@qatest.com`
+    const password = Cypress.env('USER_PASSWORD')
     cy.fillSignupFormAndSubmit(emailAddress, password)
     cy.validateLoggerUser(emailAddress)
     cy.clickToAdd()
@@ -28,7 +28,9 @@ describe('Songs suite tests', () => {
     cy.logOut()
   })
 
-  it.skip('Track Separation', () => {
+  it('Track Separation', () => {
+    const emailAddress = `${faker.internet.userName(50).toLowerCase()}@qatest.com`
+    const password = Cypress.env('USER_PASSWORD')
     cy.fillSignupFormAndSubmit(emailAddress, password)
     cy.validateLoggerUser(emailAddress)
     cy.clickToAdd()
@@ -49,6 +51,8 @@ describe('Songs suite tests', () => {
   })
 
   it('Hiding the Moises Collection', () => {
+    const emailAddress = `${faker.internet.userName(50).toLowerCase()}@qatest.com`
+    const password = Cypress.env('USER_PASSWORD')
     cy.fillSignupFormAndSubmit(emailAddress, password)
     cy.validateLoggerUser(emailAddress)
     cy.clickToAdd()
@@ -65,6 +69,8 @@ describe('Songs suite tests', () => {
   })
 
   it('Deleting the Uploaded Song', () => {
+    const emailAddress = `${faker.internet.userName(50).toLowerCase()}@qatest.com`
+    const password = Cypress.env('USER_PASSWORD')
     cy.fillSignupFormAndSubmit(emailAddress, password)
     cy.validateLoggerUser(emailAddress)
     cy.clickToAdd()

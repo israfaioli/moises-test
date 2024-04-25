@@ -3,7 +3,7 @@
 import { faker } from '@faker-js/faker/locale/en'
 
 describe('Sign up', () => {
-  const emailAddress = `${faker.internet.userName().toLowerCase()}@qatest.com`
+  const emailAddress = `${faker.datatype.uuid()}@qatest.com`
   const password = Cypress.env('USER_PASSWORD')
 
   afterEach(() => {

@@ -7,7 +7,7 @@ module.exports = defineConfig({
     env: {
       viewportWidthBreakpoint: 768,
     },
-    defaultCommandTimeout: 60000,
+    defaultCommandTimeout: 15000,
     chromeWebSecurity: false,
   }, setupNodeEvents(on, config) {
     require('@cypress/grep/src/plugin')(config)

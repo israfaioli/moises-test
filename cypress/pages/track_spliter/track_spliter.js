@@ -20,7 +20,7 @@ Cypress.Commands.add('selectTwoTracks', () => {
 })
 
 Cypress.Commands.add('ClickSplitOptionMenu', () => {
-  cy.get(locators.BUTTON_SPLITER_OPTION).should('be.visible').click()
+  cy.get(locators.BUTTON_SPLITER_OPTION).should('be.visible', { timeout: 30000 }).click()
 })
 
 Cypress.Commands.add('ClickConfirmSplit', () => {

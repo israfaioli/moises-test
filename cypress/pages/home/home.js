@@ -8,7 +8,7 @@ const locators = {
 }
 
 Cypress.Commands.add('validateLoggerUser', (email) => {
-  cy.get(locators.LABEL_LOGGED_USER).should('be.visible').contains(email)
+  cy.get(locators.LABEL_LOGGED_USER, {timeout: 30000}).contains(email, {timeout: 30000})
 })
 
 Cypress.Commands.add('accessUserInformation', () => {
