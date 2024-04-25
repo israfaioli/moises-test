@@ -14,7 +14,7 @@ describe('Songs suite tests', () => {
     cy.clearCookies()
   })
 
-  it('Upload a Song', () => {
+  it.only('Upload a Song', () => {
     cy.fillSignupFormAndSubmit(emailAddress, password)
     cy.validateLoggerUser(emailAddress)
     cy.clickToAdd()
