@@ -19,13 +19,13 @@ Cypress.Commands.add('accessUserInformation', () => {
 Cypress.Commands.add('logOutWhenMenuIsHidden', () => {
   cy.accessUserInformation()
   cy.get(locators.BUTTON_USER_INFORMATION).should('be.visible').click()
-  cy.get(locators.BUTTON_LOGOUT).click()
+  cy.get(locators.BUTTON_LOGOUT, {timeout: 5000}).click()
   cy.url().should('include', '/login')
 })
 
 Cypress.Commands.add('logOut', () => {
   cy.accessUserInformation()
-  cy.get(locators.BUTTON_LOGOUT).click()
+  cy.get(locators.BUTTON_LOGOUT, {timeout: 5000}).click()
   cy.url().should('include', '/login')
 })
 

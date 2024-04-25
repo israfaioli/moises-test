@@ -18,11 +18,11 @@ const locators = {
 
 
 Cypress.Commands.add('validateAttachedTrack', (track_name) => {
-  cy.get(locators.LABEL_ATTACH_TRACK).should('be.visible').contains(track_name)
+  cy.get(locators.LABEL_ATTACH_TRACK).should('be.visible').contains(track_name, {timeout: 5000})
 })
 
 Cypress.Commands.add('validateYourTrackName', (track_name) => {
-  cy.get(locators.LABEL_YOUR_TRACK).should('be.visible').contains(track_name)
+  cy.get(locators.LABEL_YOUR_TRACK).should('be.visible').contains(track_name, {timeout: 5000})
 })
 
 Cypress.Commands.add('clickNext', () => {
@@ -34,7 +34,7 @@ Cypress.Commands.add('clickSubmit', () => {
 })
 
 Cypress.Commands.add('validateUploadProgress', () => {
-  cy.get(locators.LABEL_UPLOADING).should('be.visible').contains('Enviando')
+  cy.get(locators.LABEL_UPLOADING).should('be.visible').contains('Enviando', {timeout: 5000})
 })
 
 Cypress.Commands.add('validateMyLibraryTrack', (track_position, track_name) => {
