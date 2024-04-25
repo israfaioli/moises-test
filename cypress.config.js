@@ -1,7 +1,7 @@
 const { defineConfig } = require('cypress')
 
 module.exports = defineConfig({
-  projectId: 'm9sw72',
+  projectId: 'x1d4qa',
   e2e: {
     baseUrl: 'https://studio.moises.ai',
     env: {
