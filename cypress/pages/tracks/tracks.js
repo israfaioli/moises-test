@@ -38,7 +38,7 @@ Cypress.Commands.add('validateUploadProgress', () => {
 })
 
 Cypress.Commands.add('validateMyLibraryTrack', (track_position, track_name) => {
-  cy.get('div.track-list_container__SKIeX > div:nth-child('+ track_position + ') > div > button > span > p:nth-child(1)', { timeout: 30000 }).contains(track_name)
+  cy.get('div.track-list_container__SKIeX > div:nth-child('+ track_position + ') > div > button > span > p:nth-child(1)', { timeout: 30000 }).should('be.visible').contains(track_name)
 })
 
 Cypress.Commands.add('hideCollection', () => {
