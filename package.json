@@ -1,0 +1,26 @@
+{
+  "name": "testes-e2e-cypress",
+  "version": "1.0.0",
+  "description": "TBD.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint cypress/**/*.js && eslint cypress.config.js",
+    "lint:fix": "eslint cypress/**/*.js --fix && eslint cypress.config.js --fix",
+    "cy:open": "cypress open",
+    "test": "cypress run",
+    "test:cloud": "cypress run --record --tag 'desktop'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cypress/grep": "^3.1.5",
+    "@faker-js/faker": "^8.0.2",
+    "cypress": "^12.15.0",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-iframe": "^1.0.1",
+    "cypress-mailosaur": "^2.13.0",
+    "eslint": "^8.43.0",
+    "eslint-plugin-cypress": "^2.13.3"
+  }
+}
